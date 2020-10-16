@@ -1,0 +1,23 @@
+body{
+
+    margin: 0 0 10% 0;
+    color: #000;
+    background-image: url(4.gif);
+    background-size: 100% auto;
+
+    font-size: 5vh;
+
+    
+}
+
+.who{
+    text-align: center;
+    font-size: 5vw;
+
+    background-color: black;
+    color: #9a3200;
+}
+
+p{
+    color: #e04900;
+}
