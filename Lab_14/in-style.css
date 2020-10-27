@@ -1,0 +1,35 @@
+body {
+  background-color: #e0b8ff;
+}
+
+.text {
+  float: left;
+  border: 0px;
+  font-size: 18px;
+  margin-left: 12%;
+  margin-top: 4%;
+}
+
+.firststage {
+  font-style: normal;
+  color: Black;
+}
+
+.smth {
+  font-style: normal;
+  color: DarkRed;
+}
+.else {
+  font-style: oblique;
+  color: DarkRed;
+}
+
+.ro {
+  font-style: normal;
+  color: Red;
+}
+
+.smth2 {
+  font-style: normal;
+  color: Green;
+}
