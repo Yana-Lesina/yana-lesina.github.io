@@ -1,0 +1,36 @@
+body {
+  /* background-image: url(green3.jpg) no-repeat 50% fixed; */
+  /* background-color: aquamarine; */
+  background: radial-gradient(#444c5c, #e1b162, #78a5a3, #ffa9a1);
+}
+
+p {
+  text-align: center;
+  font-family: "Amatic SC", cursive;
+  font-size: 2.5vw;
+  padding: 0 0 7% 0;
+  margin: 0;
+}
+.mem {
+  font-size: 5vw;
+}
+
+.container {
+  margin: 5% 15%;
+}
+
+.row1,
+.row2,
+.row3 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.foto {
+  width: 30%;
+}
+
+.f {
+  width: 100%;
+}
