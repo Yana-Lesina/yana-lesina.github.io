@@ -1,0 +1,197 @@
+body {
+  margin: 0;
+  background-color: #fff1b0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.text {
+  font-size: 2.2vw;
+  text-align: center;
+}
+.text-believe {
+  font-size: 2.2vw;
+  text-align: center;
+}
+.tabl {
+  margin: 10% auto;
+}
+
+.container-intro {
+  background-color: rgb(172, 239, 247, 1);
+  background-image: url(img/ad/pandas.jpg);
+  background-repeat: repeat;
+  background-size: cover;
+  background-size: 100% 100%;
+}
+
+.intro-foto {
+  width: 60%;
+  margin: 0 auto;
+  padding: 4% 0 5% 0;
+}
+
+.foto {
+  width: 100%;
+}
+
+.about {
+  margin: 0 auto 15%;
+  text-align: center;
+  padding: 2%;
+}
+/* ................................................. */
+.container-2 {
+  background-color: #fde0e3; /*rgb(255, 206, 231);*/
+  padding: 7%;
+}
+
+.container-about {
+  display: flex;
+  justify-content: space-around;
+  /* align-items: start; */
+  align-items: stretch;
+
+  width: 100%;
+  padding: 0 10%;
+
+  margin: -20% 0 0 0;
+}
+
+.pink-fotos {
+  background-color: #fff1b0; /*rgb(255, 125, 175); */
+  width: 30%;
+  min-height: 10em;
+  padding: 3%;
+
+  text-align: center;
+}
+
+.foto1,
+.foto2,
+.foto3 {
+  width: 100%;
+}
+
+/* .................................................. */
+
+.container-3 {
+  display: flex;
+  justify-content: space-around;
+  align-items: stretch;
+
+  width: 100%;
+  background-color: #fff1b0;
+  padding: 5% 15% 3% 15%;
+}
+.block {
+  width: 30%;
+}
+
+.rows {
+  margin: 5% auto;
+  width: 20%;
+}
+.row {
+  width: 100%;
+}
+
+.fotos-3 {
+  width: 100%;
+}
+.loaging-container {
+  width: 100%;
+  background-color: #fde0e3;
+}
+.loaging {
+  width: 30%;
+  margin: 0 auto;
+}
+.img-loaging {
+  width: 100%;
+}
+/* ====================================================
+            KVEST
+===================================================== */
+/* KVEST-1 */
+.kvest-1,
+.kostil {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  background-color: #fff1b0;
+  padding-top: 5%;
+  padding-bottom: 5%;
+}
+
+.search-block {
+  width: 30%;
+  /* margin: 3% auto; */
+}
+.poisk-container {
+  /* margin: 3% auto; */
+}
+
+.search-img {
+  width: 100%;
+}
+
+.search-rows {
+  width: 15%;
+}
+.row-search {
+  width: 100%;
+}
+
+.poisk-img {
+  width: 520px;
+  height: 534px;
+}
+
+.kostil {
+  padding-top: 5%;
+}
+
+/*================= ПРЯЧЕM============================*/
+/* #main .kvest-3 {
+  display: none;
+}
+#main:target .kvest-3 {
+  display: block;
+} */
+
+/* #table-js .kvest-3 {
+  display: none;
+}
+#table-js:target .kvest-3 {
+  display: block;
+} 
+ */
+/* ====================================================
+            KVEST-2
+
+*/
+
+.about {
+  text-align: center;
+  color: #ededed;
+  background-color: rgb(172, 239, 247, 1);
+  font: 3vw Oswald;
+  transition: 0.5s all ease;
+  text-transform: uppercase;
+  text-shadow: 1px 1px #61b4de, 2px 2px #61b4de, 3px 3px #61b4de,
+    4px 4px #61b4de, 5px 5px #61b4de, 6px 6px #91c467, 7px 7px #91c467,
+    8px 8px #91c467, 9px 9px #91c467, 10px 10px #91c467, 11px 11px #f3a14b,
+    12px 12px #f3a14b, 13px 13px #f3a14b, 14px 14px #f3a14b, 15px 15px #f3a14b,
+    16px 16px #e84c50, 17px 17px #e84c50, 18px 18px #e84c50, 19px 19px #e84c50,
+    20px 20px #e84c50, 21px 21px #4e5965, 22px 22px #4e5965, 23px 23px #4e5965,
+    24px 24px #4e5965, 25px 25px #4e5965;
+}
+.about:hover {
+  color: #0a0a0a;
+  text-shadow: 1px 1px #61b4de, 2px 2px #91c467, 3px 3px #f3a14b,
+    4px 4px #e84c50, 5px 5px #4e5965;
+}
