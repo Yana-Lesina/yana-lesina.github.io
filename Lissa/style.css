@@ -1,0 +1,257 @@
+/*!
+     * chiefSlider (https://itchief.ru/lessons/php/feedback-form-for-website)
+     * Copyright 2018 Alexander Maltsev
+     * Licensed under MIT (https://github.com/itchief/feedback-form/blob/master/LICENSE)
+     */
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+    "Segoe UI Symbol";
+  /* color: #fff; */
+  background-color: #fff1b0;
+  /* height: 3000px; */
+}
+
+.kto {
+  text-shadow: 0px 4px 3px rgba(0, 0, 0, 0.4), 0px 8px 13px rgba(0, 0, 0, 0.1),
+    0px 18px 23px rgba(0, 0, 0, 0.1);
+
+  text-align: center;
+
+  font-family: "Open Sans Condensed", sans-serif;
+
+  font-size: 3.2vw;
+}
+
+.liza {
+  position: absolute;
+  top: 1.5%;
+  left: 63%;
+  margin-bottom: 0;
+  padding-bottom: 0;
+  font-family: "Amatic SC", cursive;
+  color: #383127;
+  font-size: 7vw;
+  text-align: center;
+}
+
+.text {
+  text-align: center;
+  /* font-family: "Amatic SC", cursive; */
+  font-family: "Open Sans Condensed", sans-serif;
+  font-size: 3.2vw;
+}
+
+.container {
+  padding: 3% 8%;
+}
+
+/* =====НАЧАЛЬНАЯ=======================================*/
+
+.container-intro {
+  background-color: #fff1b0;
+  background-image: url(img/cactus1.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* background-size: 100% 100%; */
+}
+
+.intro-foto {
+  width: 40%;
+  margin: 0 auto;
+  padding: 4% 0 5% 0;
+}
+
+.foto {
+  width: 100%;
+}
+
+/* ======СЛАЙДЕР-1=============================================*/
+
+.slider {
+  position: relative;
+  overflow: hidden;
+}
+
+.slider__wrapper {
+  display: flex;
+  justify-content: start;
+  transition: transform 0.6s ease;
+}
+
+.slider__item {
+  flex: 0 0 50%;
+  max-width: 50%;
+}
+.f-in-slider {
+  height: 100%;
+  /* width: 50%; */
+}
+
+.slider__control {
+  position: absolute;
+  top: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  color: #fff;
+  text-align: center;
+  opacity: 0.5;
+  height: 50px;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.slider__control:hover,
+.slider__control:focus {
+  color: #fff;
+  text-decoration: none;
+  outline: 0;
+  opacity: 0.9;
+}
+
+.slider__control_left {
+  left: 0;
+}
+
+.slider__control_right {
+  right: 0;
+}
+
+.slider__control::before {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background: transparent no-repeat center center;
+  background-size: 100% 100%;
+}
+
+.slider__control_left::before {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23fff' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E");
+}
+
+.slider__control_right::before {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23fff' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E");
+}
+
+.slider__item > div {
+  line-height: 250px;
+  font-size: 100px;
+  text-align: center;
+}
+
+/* ======ЭТО КТО ====================================*/
+/* ======ЛЮБИТЕЛЬ ...=================================*/
+
+.foto-block {
+  width: 30%;
+  margin: 3% auto;
+}
+.foto {
+  width: 100%;
+}
+
+/* =======================================*/
+.text-ad {
+  text-align: left;
+  padding-left: 5%;
+}
+.spisok {
+  display: flex;
+  justify-content: space-around;
+  list-style-type: none;
+}
+.sp {
+  text-decoration: none;
+}
+
+/* =======================================
+СКРЫТОЕ
+=======================================*/
+#coffee .yes {
+  display: none;
+}
+#coffee:target .yes {
+  display: block;
+}
+#no-coffee .no {
+  display: none;
+}
+#no-coffee:target .no {
+  display: block;
+}
+
+/* ..................... */
+
+#y-cactus .yes {
+  display: none;
+}
+#y-cactus:target .yes {
+  display: block;
+}
+#n-cactus .no {
+  display: none;
+}
+#n-cactus:target .no {
+  display: block;
+}
+/* .......................... */
+
+#main .answ {
+  display: none;
+}
+#main:target .answ {
+  display: block;
+}
+
+/* =======================================*/
+.galery {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: stretch;
+
+  margin: 0 10%;
+}
+.galery-element {
+  width: 30%;
+  padding: 1%;
+}
+.middled-img {
+  padding-top: 50%;
+}
+
+.l-img {
+  width: 100%;
+}
+
+/* ======навожу красоту=====================*/
+.container-1 {
+  background-color: rgb(172, 239, 247, 1);
+  /* background-image: url(img/clouds.png); */
+  /* background-repeat: repeat;
+  background-size: cover;
+  background-size: 100% 100%; */
+}
+
+.container-2 {
+  background: rgb(255, 175, 146);
+}
+
+.container-plivy {
+  background: rgb(157, 255, 132);
+}
+
+.container-4 {
+  /* background: rgb(197, 219, 248); */
+  background: rgb(250, 211, 138);
+}
+
+.specialno {
+  width: 50%;
+  padding: 0;
+}
