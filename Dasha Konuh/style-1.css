@@ -1,0 +1,332 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: verdana;
+  background-color: #000;
+  font-size: 2vw;
+  color: #eee3c1;
+}
+/* ===========================================
+      НАВОЖУ КРАСОТУ
+========================================= */
+
+h1 {
+  margin: 0;
+}
+h2 {
+  font-family: "Kelly Slab", cursive;
+}
+.aaa {
+  text-align: right;
+  margin-right: -50%;
+}
+
+/* ........................ */
+
+@import url(https://fonts.googleapis.com/css?family=Varela+Round);
+
+h1 {
+  color: hsla(0, 0%, 0%, 0.9);
+  font: normal 140px Varela Round, sans-serif;
+  left: 0;
+  letter-spacing: 5px;
+  text-align: center;
+  text-transform: uppercase;
+  top: 50%;
+  width: 100%;
+  animation: move linear 2000ms infinite;
+}
+
+@keyframes move {
+  0% {
+    text-shadow: 4px -4px 0 hsla(0, 100%, 50%, 1),
+      3px -3px 0 hsla(0, 100%, 50%, 1), 2px -2px 0 hsla(0, 100%, 50%, 1),
+      1px -1px 0 hsla(0, 100%, 50%, 1), -4px 4px 0 hsla(180, 100%, 50%, 1),
+      -3px 3px 0 hsla(180, 100%, 50%, 1), -2px 2px 0 hsla(180, 100%, 50%, 1),
+      -1px 1px 0 hsla(180, 100%, 50%, 1);
+  }
+  25% {
+    text-shadow: -4px -4px 0 hsla(180, 100%, 50%, 1),
+      -3px -3px 0 hsla(180, 100%, 50%, 1), -2px -2px 0 hsla(180, 100%, 50%, 1),
+      -1px -1px 0 hsla(180, 100%, 50%, 1), 4px 4px 0 hsla(0, 100%, 50%, 1),
+      3px 3px 0 hsla(0, 100%, 50%, 1), 2px 2px 0 hsla(0, 100%, 50%, 1),
+      1px 1px 0 hsla(0, 100%, 50%, 1);
+  }
+  50% {
+    text-shadow: -4px 4px 0 hsla(0, 100%, 50%, 1),
+      -3px 3px 0 hsla(0, 100%, 50%, 1), -2px 2px 0 hsla(0, 100%, 50%, 1),
+      -1px 1px 0 hsla(0, 100%, 50%, 1), 4px -4px 0 hsla(180, 100%, 50%, 1),
+      3px -3px 0 hsla(180, 100%, 50%, 1), 2px -2px 0 hsla(180, 100%, 50%, 1),
+      1px -1px 0 hsla(180, 100%, 50%, 1);
+  }
+  75% {
+    text-shadow: 4px 4px 0 hsla(180, 100%, 50%, 1),
+      3px 3px 0 hsla(180, 100%, 50%, 1), 2px 2px 0 hsla(180, 100%, 50%, 1),
+      1px 1px 0 hsla(180, 100%, 50%, 1), -4px -4px 0 hsla(0, 100%, 50%, 1),
+      -3px -3px 0 hsla(0, 100%, 50%, 1), -2px -2px 0 hsla(0, 100%, 50%, 1),
+      -1px -1px 0 hsla(0, 100%, 50%, 1);
+  }
+  100% {
+    text-shadow: 4px -4px 0 hsla(0, 100%, 50%, 1),
+      3px -3px 0 hsla(0, 100%, 50%, 1), 2px -2px 0 hsla(0, 100%, 50%, 1),
+      1px -1px 0 hsla(0, 100%, 50%, 1), -4px 4px 0 hsla(180, 100%, 50%, 1),
+      -3px 3px 0 hsla(180, 100%, 50%, 1), -2px 2px 0 hsla(180, 100%, 50%, 1),
+      -1px 1px 0 hsla(180, 100%, 50%, 1);
+  }
+}
+/* ................................ */
+.h1-attention {
+  margin-top: 3%;
+  color: #d0021b;
+}
+
+.attention-text {
+  margin: 3% 0 2% 0;
+  padding: 3% 5%;
+  /* background-color: rgb(85, 14, 14); */
+  color: #eee3c1;
+}
+/* ююююююююююююююююююююююююю */
+.btn {
+  margin: 5% 0 10% 0;
+  padding: 3% 5%;
+  background-color: black;
+  border: 0.01em solid #d0021b;
+  cursor: pointer;
+
+  text-transform: uppercase;
+  letter-spacing: 1.1rem;
+}
+.oznak {
+  padding: 3% 5%;
+  text-decoration: none;
+  color: #d0021b;
+}
+/* ===========================================
+      БЛОК
+========================================= */
+.attention-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: black;
+
+  padding: 3% 5%;
+}
+/* ......................... */
+#warn-you .card {
+  display: none;
+}
+#warn-you:target .card {
+  display: flex;
+}
+#warn-you .mem-1 {
+  display: none;
+}
+#warn-you:target .mem-1 {
+  display: flex;
+}
+
+/* ...... */
+.warning-wrapper {
+  background-color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 7% 0 20% 0;
+}
+.card {
+  width: 320px;
+  height: 320px;
+  position: relative;
+  perspective: 1000px;
+  /* border: 1px solid #fff; */
+}
+
+.front,
+.back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 1s;
+  backface-visibility: hidden;
+  background-color: #fff;
+}
+.front img {
+  /* max-width: 100%; */
+  /* min-width: 100%; */
+  width: 100%;
+  height: auto;
+}
+
+.back img {
+  width: 200%;
+  /* max-width: 200%;
+  min-width: 200%; */
+  height: auto;
+}
+
+.back {
+  transform: rotateY(180deg);
+}
+.card:hover .front {
+  transform: rotateY(180deg);
+}
+.card:hover .back {
+  transform: rotateY(360deg);
+}
+
+/* .......................... */
+.mem {
+  width: 15%;
+  position: absolute;
+  /* bottom: 0; */
+  right: 15%;
+}
+/* ===========================================
+      БЛОК
+========================================= */
+.gallery-container {
+  background-color: #000;
+
+  /* border: 0.1em solid #eee3c1; */
+}
+
+.gallery-inner {
+  width: 50%;
+  margin: 3% auto;
+}
+.row {
+  display: flex;
+  justify-content: space-around;
+}
+.block {
+  width: 27%;
+  margin-top: 1%;
+  padding: 0;
+}
+
+.img {
+  border: 0.1em solid #eee3c1;
+}
+
+.gallery-img {
+  width: 100%;
+}
+
+/* ===========================================
+      БЛОК
+========================================= */
+.smugl-container {
+  margin: 0;
+  padding: 3% 15%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: black;
+}
+
+.smugl-block {
+  width: 30%;
+  padding: 0 auto;
+}
+
+.smugl-img {
+  width: 100%;
+}
+.mem-2 {
+  width: 30%;
+
+  position: absolute;
+  /* bottom: 0; */
+  left: 65%;
+  top: 350%;
+}
+
+.mem-img {
+  width: 100%;
+}
+/* ===========================================
+      БЛОК
+========================================= */
+.kadet-container {
+  margin: 0;
+  padding: 3% 15%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: black;
+}
+.kadet-block {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.kadet-block2 {
+  margin-top: 5%;
+}
+.kadet-item {
+  width: 30%;
+  border: 0.1em solid #eee3c1;
+}
+.kadet-img {
+  width: 100%;
+}
+
+.k-group {
+  width: 60%;
+}
+/* ===========================================
+      БЛОК
+========================================= */
+.apple-inner {
+  display: flex;
+  justify-content: space-between;
+  margin: 7% 0 5% 0;
+  border: 0.1em solid #eee3c1;
+}
+.block-apple-t {
+  padding: 3% 5%;
+}
+.apple-img {
+  width: 100%;
+}
+/* ===========================================
+      БЛОК
+========================================= */
+.end-container {
+  margin: 0;
+  padding: 3% 15%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: black;
+}
+
+.end-img-block {
+  width: 70%;
+}
+
+.end-img {
+  width: 100%;
+}
+/* ===========================================
+      БЛОК
+========================================= */
+.inst-btn {
+  margin: 0.5%;
+}
+.inst-wrpr {
+  margin-top: 5%;
+  padding: 0;
+}
