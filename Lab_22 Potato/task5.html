@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task 5</title>
+  <style>
+    body{
+      background: url(img/love1.jpg);
+      background-repeat: no-repeat;
+      background-size: cover;
+
+      text-align: center;
+      font-size: 4vw;
+
+    }
+
+    .back{
+      position: absolute;
+      top: 5%;
+      left: 5%;
+      width: 10%;
+    }
+  </style>
+</head>
+<body>
+  <a href="potatochka.html">
+    <img src="img/arrow2.png" alt=" " class="back">
+  </a>
+  <script>
+    function pow(x, n) 
+    {
+        if (n == 1) 
+        {
+          return x;
+        } 
+        else 
+        {
+          return x * pow(x, n - 1);
+        }
+      }
+      
+      // То же самое, только короче, но пока непонятней:
+      // function pow(x, n) {
+      // return (n == 1) ? x : (x * pow(x, n - 1));}
+
+      var x, n;
+      x = prompt('Оцени свою любовь к друзьям по шкале от 1 до 10: ');
+      n = prompt('В какой степени?)');
+      document.write('Ответ: ', pow(x, n));
+  </script>
+  
+</body>
+</html>

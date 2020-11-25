@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  
+  <link rel="stylesheet" type="text/css" href="lib/sweet-alert.css">
+
+  <title>Task 1-2</title>
+  <style>
+    body{
+      background: url(img/space1.jpg);
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+    .clock{
+      text-align: center;
+      color: #fff;
+      font-size: 5vw;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+
+    .text{
+      text-align: center;
+      color: rgb(255, 231, 94);
+      font-size: 3.5vw;
+      padding: 5% 25%;
+
+      text-shadow: 1px 0 1px #000, 
+0 1px 1px #000, 
+-1px 0 1px #000, 
+0 -1px 1px #000;
+    }
+
+    .back{
+      position: absolute;
+      top: 5%;
+      left: 5%;
+      width: 10%;
+    }
+
+    
+  </style>
+</head>
+<body>
+  <a href="potatochka.html">
+    <img src="img/arrow2.png" alt=" " class="back">
+  </a>
+  <div class="text">Уже</div>
+
+  <!-- =============================
+    ЧАСЫ 
+  ================================-->
+<div id="time" class=clock>00:00:00</div>
+
+<script type="text/javascript">
+  setInterval(function () {
+    date = new Date(),
+      h = date.getHours(),
+      m = date.getMinutes(),
+      s = date.getSeconds(),
+      h = (h < 10) ? '0' + h : h,
+      m = (m < 10) ? '0' + m : m,
+      s = (s < 10) ? '0' + s : s,
+      document.getElementById('time').innerHTML = h + ':' + m + ':' + s;
+  }, 1000);  
+</script>
+
+<div class=text>
+  ..но какая разница, ведь: 
+  <br>Время относительно для всех, потому что каждый воспринимает его по разному. 
+  <br>Бернар Вербер
+  
+
+</div>
+
+<script src=script.js></script>
+</body>
+</html>

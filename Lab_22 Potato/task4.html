@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task 4</title>
+  <style>
+    body{
+      background: url(img/magic.jpg);
+      background-repeat: no-repeat;
+      background-size: cover;
+
+      text-align: center;
+      font-size: 4vw;
+
+    }
+
+    .back{
+      position: absolute;
+      top: 5%;
+      left: 5%;
+      width: 10%;
+    }
+  </style>
+</head>
+<body>
+  <a href="potatochka.html">
+    <img src="img/arrow2.png" alt=" " class="back">
+  </a>
+  <script>
+    var num1, num2;
+    num1 = prompt('Сейчас будет немного математики. Если хотите острых ощущений, представьте, что мы на вышмате. Введите первое число: ');
+    num2 = prompt('Введите второе число: ');
+
+    document.write('Минимальное число: ', Math.min(num1,num2));
+
+  </script>
+  
+</body>
+</html>
