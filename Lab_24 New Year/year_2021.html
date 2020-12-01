@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- <link rel="stylesheet" href="style.css"> -->
+  <link rel="stylesheet" href="style-bull.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Bitter:wght@300;600&family=Kelly+Slab&display=swap"
+    rel="stylesheet">
+  <title>2021 info</title>
+  <style>
+    
+  </style>
+</head>
+<body>
+  <div class="back-block">
+    <a href=main.html><img src="img/back.png" alt="no" class="back-img"></a>
+  </div>
+
+  <!-- ================================================
+
+  ==================================================-->
+  <div class="block-bull">
+    <h2>Тотемное животное 2021 года</h2>
+    <div class="inner-block">
+      <div class="inner-img">
+        <img src="img/b-metal1.jpg" alt="" class="bull-img">
+      </div>
+      <div class="bull-text">
+        По восточному календарю 2021 год пройдёт под знаком <b><u>белого металлического Быка</u></b> или серебряного Буйвола. Старинная
+        китайская легенда гласит, что Бык должен был стать первым из 12 священных животных. Но когда Буйвол спешил к Будде за
+        благословением, Крыса ухватилась за его хвост и забралась на голову. Когда бык добежал до Будды, крыса спрыгнула с
+        бычьей головы прямо мудрецу в руки. Так хитрая Крыса взобралась на первое место в китайском календаре, а трудяга Бык
+        оказался ступенью ниже.
+      </div>
+    </div>
+  </div>
+
+    <div class="block-bull">
+      <h2>Какие сюрпризы нам готовит белый металлический Бык?</h2>
+      <div class="inner-block">
+        
+        <div class="bull-text">
+          
+          Буйвол – символ дикой, необузданной природы. Он одновременно и великий труженик, и грозный соперник. Астрологи считают,
+          что 2021 год будет более спокойным, чем уходящий високосный год Крысы. Металл ассоциируется с твёрдостью духа,
+          устойчивостью, неуязвимостью, поэтому следующий год будет удачным для сильных духом, амбициозных людей, которые идут
+          вперёд, сметая все преграды на своём пути. Бык любит трудолюбивых, упорных людей, которые добиваются всего
+          самостоятельно, не прибегая к помощи окружающих. Им будет сопутствовать удача во всех сферах жизни, начиная с семьи,
+          заканчивая карьерой.
+        </div>
+        <div class="inner-img">
+          <img src="img/b-3.jpg" alt="" class="bull-img">
+        </div>
+      </div>
+    
+    </div>
+    <!-- =========================================================
+    =========================================== -->
+    <div class="clock-block">
+      <div class="title title-begin">Через..</div>
+      <div id="countdown">
+        <span class="days"></span> days
+        <span class="hours"></span> hours
+        <span class="minutes"></span> minutes
+        <span class="seconds"></span> seconds
+      </div>
+      <div class="title title-end">
+        Вы, скорее всего, будете пить шампанское, загадывать желание и поздравлять всех с Новым
+        годом!
+      </div>
+    </div>
+
+  <script>
+    const daysSpan = document.querySelector(".days");
+      const hoursSpan = document.querySelector(".hours");
+      const minutesSpan = document.querySelector(".minutes");
+      const secondsSpan = document.querySelector(".seconds");
+
+      // New Year Date.
+      const deadline = "1/1/2021";
+
+      // 10 Minut Timer.
+      // const timeInminutes = 10;
+      // const currentTime = Date.parse(new Date());
+      // const deadline = new Date(currentTime + timeInminutes * 60 * 1000);
+
+      // 15 Min's Timer from Now.
+      // const deadline = new Date(Date.parse(new Date()) + 15 * 24 * 60 * 60 * 1000);
+
+      function getTimeRemaining(endTime) {
+        const total = Date.parse(endTime) - Date.parse(new Date()); // Return Milliseconds.
+        let seconds = Math.floor((total / 1000) % 60); // Return Seconds left in Minute.
+        let minutes = Math.floor((total / 1000 / 60) % 60); // Return Minutes/Minute left In Hour.
+        let hours = Math.floor((total / (1000 * 60 * 60)) % 24); // Return Hours/Hour left In a Day.
+        let days = Math.floor(total / (1000 * 60 * 60 * 24)); // Return Number of days left.
+
+        return { total, days, hours, minutes, seconds };
+      }
+
+      function initializeClock(id, deadline) {
+        const clock = document.getElementById(id);
+
+        function updateClock() {
+          const t = getTimeRemaining(deadline);
+
+          daysSpan.innerHTML = t.days;
+          hoursSpan.innerHTML = t.hours;
+          minutesSpan.innerHTML = addZero(t.minutes);
+          secondsSpan.innerHTML = addZero(t.seconds);
+
+          if (t.total < 0) {
+            clearInterval(timeIntervel);
+          }
+        }
+
+        updateClock();
+        const timeIntervel = setInterval(updateClock, 1000);
+      }
+
+      function addZero(n) {
+        return (parseInt(n, 10) < 10 ? "0" : "") + n;
+      }
+
+      initializeClock("countdown", deadline);
+
+  </script>
+</body>
+</html>

@@ -1,0 +1,214 @@
+html {
+  box-sizing: border-box;
+}
+h6 {
+  font-size: 2vw;
+  margin: 0 auto 2%;
+}
+h2 {
+  text-shadow: -0 -1px 2px #3d3729, 0 -1px 2px #3d3729, -0 1px 2px #3d3729,
+    0 1px 2px #3d3729, -1px -0 2px #3d3729, 1px -0 2px #3d3729,
+    -1px 0 2px #3d3729, 1px 0 2px #3d3729, -1px -1px 2px #3d3729,
+    1px -1px 2px #3d3729, -1px 1px 2px #3d3729, 1px 1px 2px #3d3729,
+    -1px -1px 2px #3d3729, 1px -1px 2px #3d3729, -1px 1px 2px #3d3729,
+    1px 1px 2px #3d3729;
+
+  color: #fff6c5;
+}
+h6 {
+  color: #fff6c5;
+}
+
+body {
+  margin: 0;
+  color: #000000;
+  text-shadow: 0 0 0.5px rgba(58, 57, 57, 0.25);
+  /* font-family: "Dosis", sans-serif; */
+  /* font-family: "Kelly Slab", cursive; */
+  font-family: "Bitter", serif;
+
+  background: url("img/ng3.jpg") 50% / cover no-repeat fixed;
+}
+/* ================================================
+      header
+=============================================== */
+
+.intro-block {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/*HEADER
+==============================================*/
+.header {
+  width: 100%; /*если это не сделать после position: absolute, шапка выравняется по левому краю*/
+  height: 100px;
+
+  position: absolute; /*делаем слой шапки выше слоя фоновой картинки-intro*/
+  top: 0;
+  left: 0;
+  /* z-index: 1000; */
+}
+.header__inner {
+  display: flex;
+  justify-content: space-between; /* делаем лого и навигацию на одной строке*/
+  padding: 35px;
+  align-items: center; /* Выравниваем навигацию и лого (на один уровень)*/
+
+  /*border-bottom: 2px solid #505268; /* проводим серую линию у шапки */
+}
+
+/*CONTAINER
+==============================================*/
+.container {
+  width: 100%;
+  height: 10vh;
+  margin: 0 auto;
+
+  position: fixed;
+  z-index: 5;
+  background: #daaa3f75;
+}
+
+/*NAV
+==============================================*/
+.nav {
+  display: flex; /*навигация "прилипла" друг к другу => margin-left: 50px; */
+
+  font-size: 2vw;
+  font-weight: 700;
+  text-transform: uppercase; /* Пишем буквы меню КАПСОМ*/
+}
+.nav__link {
+  margin-left: 50px; /*отступ слов навигации*/
+  color: #fff;
+  text-decoration: none; /*Убираем подчёркивание в режиме regular*/
+  opacity: 0.75; /* Делаем навигацию прозрачненькой*/
+  transition: opacity 0.2s linear; /* прозрачность исчезает через 2с*/
+  /*LINEAR - ГРАДИЕНТ!!!*/
+}
+.nav__link:first-child {
+  margin-left: 0px; /*убираем отступ у Features*/
+}
+.nav__link:hover {
+  text-decoration: underline;
+  opacity: 100%; /* Делаем навигацию прозрачненькой*/
+}
+
+.intro-text {
+  text-align: left;
+  font-size: 5vw;
+  color: #fff;
+  width: 70%;
+  height: auto;
+  margin: 8% auto 0;
+}
+/* ================================================
+      BLOCKS!!!!!!!!!!!!!!!!!!!!!!!!!
+=============================================== */
+.block {
+  margin: 0;
+  height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  background: #fff 50% / cover no-repeat;
+  position: relative;
+}
+
+.block h2 {
+  margin: 0;
+  font-size: 3vw;
+  text-transform: uppercase;
+}
+
+.block p {
+  font-size: 1.2vw;
+  text-align: justify;
+  line-height: 1.75em;
+  padding: 10px 100px 0;
+}
+
+/* 11111111111111111111111111111111 */
+.block-1 {
+  background: #fff url(img/s4.jpg);
+
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.text-block-1 {
+  width: 70%;
+  margin: 0 auto;
+}
+
+/* 222222222222222222222222222 */
+.block-2 {
+  background: #fff url(img/bg2.jpg);
+
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.block-for-items {
+  width: 78%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  align-items: start;
+  justify-content: space-around;
+}
+.item {
+  width: 27%;
+  padding: 2% 3%;
+  margin: 0 2%;
+
+  font-size: 1vw;
+  text-align: justify;
+
+  background: #daaa3f75;
+  border: 4px solid #daaa3fc7;
+  border-radius: 25px;
+}
+
+.item h4 {
+  text-align: center;
+  font-size: 1.3vw;
+}
+.for-img {
+  width: 20%;
+  margin: 5% auto 1%;
+}
+.ball-img {
+  width: 100%;
+}
+.trad-text {
+  padding: 1% 2%;
+}
+/* 3333333333333333333333333333333333333333 */
+/* =========================================== */
+.block-3 {
+  height: 80vh;
+  width: 75%;
+  margin: 5% auto;
+  background: #00968861;
+  /* border: 4px solid #daa93fea; */
+  border-radius: 25px;
+}
+.block-3 h2 {
+  margin: 0;
+}
+.fir {
+  width: 23%;
+  margin: 2% auto 0;
+}
+.fir-img {
+  width: 100%;
+}
+.surprise-img {
+  width: 5%;
+  position: absolute;
+}

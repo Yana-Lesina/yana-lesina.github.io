@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Bitter:wght@300;600&family=Kelly+Slab&display=swap"
+    rel="stylesheet">
+  <title>Present</title>
+  <style>
+    body{
+        background: url("img/bg2.jpg") 50% / cover no-repeat fixed;
+        font-family: "Bitter", serif;
+    }
+
+.posdrav{
+  margin-top: 5%;
+  
+} 
+ .ping-block{
+   width: 20%;
+   margin: 3% auto;
+ } 
+ .ping-img{
+   width: 100%;
+ } 
+
+h1 {
+  text-align: center;
+  text-shadow: -0 -1px 2px #3d3729, 0 -1px 2px #3d3729, -0 1px 2px #3d3729,
+    0 1px 2px #3d3729, -1px -0 2px #3d3729, 1px -0 2px #3d3729,
+    -1px 0 2px #3d3729, 1px 0 2px #3d3729, -1px -1px 2px #3d3729,
+    1px -1px 2px #3d3729, -1px 1px 2px #3d3729, 1px 1px 2px #3d3729,
+    -1px -1px 2px #3d3729, 1px -1px 2px #3d3729, -1px 1px 2px #3d3729,
+    1px 1px 2px #3d3729;
+
+  color: #fff6c5;
+}
+  .back-block {
+  width: 4%;
+  position: absolute;
+  top: 3%;
+  left: 5%;
+  z-index:20;
+  
+}
+.back-img{
+  width: 100%;
+}
+   /* /////////////////////////////////////////////////////// */
+.grid {
+  /* position: relative; */
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  /* padding: 1em 0 4em;
+  max-width: 1000px;
+  list-style: none; */
+  text-align: center;
+}
+
+/* Common style */
+.grid figure {
+  position: relative;
+  /* float: left; */
+  overflow: hidden; /*скрывает часть изображения, которая показывается при увеличении, когда наводим курсор*/
+  margin: 10px 1%;
+  min-width: 320px;
+  max-width: 480px;
+  max-height: 360px;
+  width: 28%;
+  background: #daaa3f75;
+  text-align: center;
+  cursor: pointer;
+}
+
+.grid figure img {
+  /* position: relative;
+  display: block; */
+  min-height: 100%;
+  max-width: 100%;
+  /* opacity: 0.8; */
+}
+
+.grid figure figcaption {
+  padding: 2em;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 1.5vw;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.grid figure figcaption::before,
+.grid figure figcaption::after {
+  pointer-events: none;
+}
+
+.grid figure figcaption,
+.grid figure figcaption > a {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* Anchor will cover the whole item by default */
+/* For some effects it will show as a button */
+.grid figure figcaption > a {
+  z-index: 1000;
+  text-indent: 200%;
+  white-space: nowrap;
+  font-size: 0;
+  opacity: 0;
+}
+
+.grid figure h2 {
+  word-spacing: -0.15em;
+  font-weight: 300;
+}
+
+.grid figure h2 span {
+  font-weight: 800;
+}
+
+.grid figure h2,
+.grid figure p {
+  margin: 0;
+}
+
+.grid figure p {
+  letter-spacing: 1px;
+  font-size: 68.5%;
+}
+
+/* /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+ */
+
+/*---------------*/
+/***** Chico *****/
+/*---------------*/
+
+figure.effect-Alina img {
+  -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+  transition: opacity 0.35s, transform 0.35s;
+  -webkit-transform: scale(1.12);
+  transform: scale(1.12);
+}
+
+figure.effect-Alina:hover img {
+  opacity: 0.5;
+  -webkit-transform: scale(1);
+  transform: scale(1);
+}
+
+figure.effect-Alina figcaption {
+  padding: 3em;
+}
+
+figure.effect-Alina figcaption::before {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  bottom: 30px;
+  left: 30px;
+  border: 1px solid #fff;
+  content: "";
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+figure.effect-Alina figcaption::before,
+figure.effect-Alina p {
+  opacity: 0;
+  -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+  transition: opacity 0.35s, transform 0.35s;
+}
+
+figure.effect-Alina h2 {
+  padding: 20% 0 20px 0;
+}
+
+figure.effect-Alina p {
+  margin: 0 auto;
+  max-width: 200px;
+  -webkit-transform: scale(1.5);
+  transform: scale(1.5);
+}
+
+figure.effect-Alina:hover figcaption::before,
+figure.effect-Alina:hover p {
+  opacity: 1;
+  -webkit-transform: scale(1);
+  transform: scale(1);
+}
+
+@media screen and (max-width: 50em) {
+  .content {
+    padding: 0 10px;
+    text-align: center;
+  }
+  .grid figure {
+    display: inline-block;
+    float: none;
+    margin: 10px auto;
+    width: 100%;
+  }
+}
+*,
+*:after,
+*:before {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.clearfix:before,
+.clearfix:after {
+  display: table;
+  content: "";
+}
+.clearfix:after {
+  clear: both;
+}
+
+
+  </style>
+</head>
+<body>
+  <div class="back-block">
+    <a href=main.html><img src="img/back.png" alt="no" class="back-img"></a>
+  </div>
+  <h1>Подборка новогодних фильмов</h1>
+  <!-- ============================================
+        GALLERY
+    =============================================-->
+  <div class="grid">
+  
+    <figure class="effect-Alina">
+      <img src="img/fi1.jpeg" alt=" " />
+      <figcaption>
+        <p>Один дома</p>
+        <a href="#"> </a>
+      </figcaption>
+    </figure>
+
+    <figure class="effect-Alina">
+      <img src="img/fi3.jpg" alt="img15" />
+      <figcaption>
+        <p>Морозко</p>
+        <a href="#"> </a>
+      </figcaption>
+    </figure>
+  
+    <figure class="effect-Alina">
+      <img src="img/fi6.jpg" alt="img15" />
+      <figcaption>
+        <p>Чудо на 34-й улице</p>
+        <a href="#"> </a>
+      </figcaption>
+    </figure>
+  
+  
+    <figure class="effect-Alina">
+      <img src="img/fi4.jpg" alt="img15" />
+      <figcaption>
+        <p>Гринч – похититель Рождества (2000 г.)</p>
+        <a href="#"> </a>
+      </figcaption>
+    </figure>
+  
+    <figure class="effect-Alina">
+      <img src="img/fi7.jpg" alt="img15" />
+      <figcaption>
+        <p>Чарли и шоколадная фабрика</p>
+        <a href="#"> </a>
+      </figcaption>
+    </figure>
+  
+    <figure class="effect-Alina">
+      <img src="img/fi2.jpg" alt="img15" />
+      <figcaption>
+        <p>Ирония судьбы, или С легким паром!</p>
+        <a href="#"> </a>
+      </figcaption>
+    </figure>
+  
+    
+    </div>
+<!-- ===================================================== -->
+    <h1>Подборка новогодних мультфильмов</h1>
+    <div class="grid">
+          <figure class="effect-Alina">
+            <img src="img/m2.jpg" alt=" " />
+            <figcaption>
+              <p>Кошмар перед рождеством</p>
+              <a href="#"> </a>
+            </figcaption>
+          </figure>
+          
+          <figure class="effect-Alina">
+            <img src="img/m1.jpg" alt="img15" />
+            <figcaption>
+              <p>Зима в Простоквашино</p>
+              <a href="#"> </a>
+            </figcaption>
+          </figure>
+          
+          
+          <figure class="effect-Alina">
+            <img src="img/m3.png" alt="img15" />
+            <figcaption>
+              <p>Анастасия</p>
+              <a href="#"> </a>
+            </figcaption>
+          </figure>
+          
+          <figure class="effect-Alina">
+            <img src="img/m4.jpg" alt="img15" />
+            <figcaption>
+              <p>Умка ищет друга</p>
+              <a href="#"> </a>
+            </figcaption>
+          </figure>
+          
+          <figure class="effect-Alina">
+            <img src="img/m12.jpg" alt="img15" />
+            <figcaption>
+              <p>12 месяцев</p>
+              <a href="#"> </a>
+            </figcaption>
+          </figure>
+          
+          <figure class="effect-Alina">
+            <img src="img/m5.jpg" alt="img15" />
+            <figcaption>
+              <p>Рождественская история</p>
+              <a href="#"> </a>
+            </figcaption>
+          </figure>
+
+    </div>
+  
+  </div>
+<div class="posdrav">
+  <h1>Всем хорошего Нового (и нового) года!</h1>
+  <div class="ping-block">
+    <img src="img/p-1.png" alt="no" class="ping-img">
+  </div>
+</div>
+  
+</body>
+</html>
