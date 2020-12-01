@@ -1,0 +1,151 @@
+@import url("https://fonts.googleapis.com/css2?family=Seymour+One&family=Ubuntu+Condensed&display=swap");
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-size: 4.5vh;
+  color: #fff;
+  /* text-shadow: -0 -1px 2px #3d3729, 0 -1px 2px #3d3729, -0 1px 2px #3d3729,
+    0 1px 2px #3d3729, -1px -0 2px #3d3729, 1px -0 2px #3d3729,
+    -1px 0 2px #3d3729, 1px 0 2px #3d3729, -1px -1px 2px #3d3729,
+    1px -1px 2px #3d3729, -1px 1px 2px #3d3729, 1px 1px 2px #3d3729,
+    -1px -1px 2px #3d3729, 1px -1px 2px #3d3729, -1px 1px 2px #3d3729,
+    1px 1px 2px #3d3729; */
+
+  color: #25113c;
+  font-family: "Ubuntu Condensed", sans-serif;
+}
+.aestet-ppcontainer,
+.body-container {
+  background: url(img/bg1.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.aestet-ppcontainer {
+  padding: 7vh 10vh 10vh 40vh;
+  min-height: 100vh;
+}
+.inner-block {
+  width: 100%;
+  /* margin: 0 auto; */
+  /* margin: 0 10%; */
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.name {
+  font-family: "Seymour One", sans-serif;
+  font-size: 6vh;
+  color: #fff;
+  text-shadow: 4px 4px 0px rgba(46, 45, 45, 0.64);
+  margin-bottom: -40%;
+  margin-right: -30%;
+  z-index: 3;
+}
+.intro-img-block {
+  min-width: 400px;
+  height: 100%;
+}
+.intro-img {
+  width: 100%;
+}
+.items {
+  /* width: 50%; */
+  /* height: 100vh;
+  height: 100%; */
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.item-block {
+  width: 50%;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+#spec-item-block {
+  padding: 3% 0;
+}
+
+.item-img-block {
+  /* width: 50%; */
+  /* height: 33%; */
+  min-width: 100px;
+}
+.item-img {
+  width: 100%;
+}
+.item-text {
+  padding: 2% 5%;
+  align-items: center;
+  text-align: left;
+}
+
+/* =============================================
+Warn
+==============================================*/
+.body-container {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  min-height: 100vh;
+}
+.attent-container {
+  width: 20vh;
+  /* align-items: center; */
+  justify-content: start;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+.attent-img {
+  width: 30vh;
+}
+.attent-img-ar {
+  width: 20vh;
+  margin-left: 5%;
+}
+/* ===========gallery================= */
+.Also-container {
+  width: 200vh;
+  margin: 3vh auto 3vh 0;
+  padding-left: 100px;
+}
+.gallery {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.foto-block {
+  width: 30vh;
+  padding: 1%;
+  margin: 0;
+}
+.p-img {
+  width: 100%;
+}
+
+/* =============== */
+a {
+  border: 3px solid rgb(119, 0, 255); /* Синяя рамка вокруг ссылок */
+  padding: 3px; /* Поля вокруг текста */
+  text-decoration: none; /* Скрываем подчёркивание */
+}
+a:hover {
+  border: 5px solid rgb(255, 0, 212); /*  рамка при наведении курсора на ссылку */
+  cursor: pointer;
+}
+.AAA {
+  text-align: center;
+  padding: 25px;
+  background: rgb(170, 135, 253);
+  font-size: 30vh;
+}
