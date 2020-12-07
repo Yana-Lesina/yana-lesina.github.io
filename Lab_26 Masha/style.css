@@ -1,0 +1,76 @@
+body {
+  margin: 0;
+  font-family: "PT Sans", sans-serif;
+  background-image: url(img/bg4.jpg);
+  background-size: cover;
+  /* background-size: 100% 100%; */
+  background-repeat: no-repeat;
+}
+.container {
+  width: 700px;
+  margin: 26px auto;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.inner {
+  width: 350px;
+}
+#myImage {
+  width: 100%;
+}
+
+/* ====================================================
+==================================================== */
+.menu ul {
+  margin: 0;
+  list-style: none;
+  padding-left: 20px;
+  display: none;
+}
+
+.menu .title {
+  font-size: 3vw;
+  cursor: pointer;
+}
+
+.menu .title::before {
+  content: "▶ ";
+  font-size: 3vw;
+  color: green;
+}
+
+.menu.open .title::before {
+  content: "▼ ";
+}
+
+.menu.open ul {
+  display: block;
+}
+/* =============== */
+#sweeties {
+  position: fixed;
+  top: 5%;
+  right: 10%;
+  text-decoration: none;
+}
+a {
+  text-decoration: none;
+  color: #000;
+}
+a:hover {
+  color: rgb(0, 110, 37);
+}
+/* ===============================================
+================================================ */
+.btn {
+  margin: 5%;
+}
+.Masha {
+  font-family: "Yeon Sung", cursive;
+  font-size: 6vw;
+}
+/* ===============================================
+================================================ */
